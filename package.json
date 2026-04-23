@@ -1,0 +1,23 @@
+{
+  "name": "polaris-sdet-takehome",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript automation framework for Polaris SDET take home challenge",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "dotenvx run -f .env.main -- playwright test tests/api",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "test:main": "dotenvx run -f .env.main -- playwright test tests/ui",
+    "test:buggy": "dotenvx run -f .env.buggy -- playwright test tests/ui"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.61.4",
+    "@playwright/test": "^1.54.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
